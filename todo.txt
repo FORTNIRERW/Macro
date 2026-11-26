@@ -1,0 +1,12 @@
+so we need to do the following things in order to get the macro to work
+
+start tracking
+    create a function that looks at everykey on keyboard
+    check how long that key has been pressed for and store the data like this (key,length_of_press,local_time_pressed)
+end tracking 
+    stop the keyboard from adding stuff to the list 
+start_macro
+    go through the hashmap and look for the current time
+    if the times match then press and hold the key for that time
+    start a timer for that key and stop pressing it once the timer runs out
+    when it ends loop the entire thing all over again if it is set to loop, reset the local_timer

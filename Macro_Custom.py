@@ -96,7 +96,6 @@ minus1:button = button(50,50,decrease_cps_small,325,100,"-1 ")
 minus10:button = button(50,50,decrease_cps_large,400,100,"-10")
 start_button: button = button(100,50,start_auto_click,185,210,button_auto_click_text)
 click_cooldown = cooldown(cps)
-set_target_fps(100)
 init_window(500,700,"AutoClickerV1")
 # set_window_icon() set this later if we want to make a proper gui
 while not window_should_close():
@@ -124,6 +123,8 @@ while not window_should_close():
             
     begin_drawing()
     clear_background(color)
+    if is_key_pressed(rl.KEY_A):
+        auto_click = True
     quit.draw()
     plus10.draw()
     plus1.draw()
